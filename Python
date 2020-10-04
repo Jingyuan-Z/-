@@ -1,31 +1,34 @@
-DAY 1
+DAY 1 变量 运算符 条件语句 循环语句
 Python 面向对象 定类 给对象分属性 代码可重复使用
+方法（函数）后面要跟括号 变量赋值不需要括号
 #print("hello world!")
 
 #import os #调入函数
 #my_cwd=os.getcwd #获取当前目录 cwd current work directory
 #print(my_cwd)
 
-
 #help("modules") 显示当前安装包
-
-counter=1110
-miles=1000.0
-name="SAO"
-
-print(counter)
-print(miles)
-print(name)
 
 Python有五个标准的数据类型：
 （1）Numbers(数字) 又分为：int(有符号整型)；long(长整型)；float（浮点型）；complex(复数用a+bj,或者complex(a，b))
 （2）String(字符串):由数字、字母、下划线组成的一串字符
 Python的字串列表有2种取值顺序：从左到右索引默认0开始的，最大范围是字符串长度少1；从右到左索引默认-1开始（最右边的元素索引为-1，倒数第二个元素为-2）
-（3）List（列表）
-（4）Tuple（元组）
-（5）Dictionary（字典）
+（3）List（列表）：用[]标识，列表中的值可以用到变量[头下标：尾下标]；从左到右索引默认0开始，从右到左索引默认-1开始，下标可以为空表示取到头或尾
+（4）Tuple（元组）：用（）标识，内部元素用逗号隔开，但是元素不能二次赋值，相当于只读列表
+（5）Dictionary（字典）：用{}标识，由索引key和它对应的值value组成。列表是有序的对象集合，字典是无序的对象集合，两者的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取
+counter=1110 #赋值整型变量
+miles=1000.0 #赋值浮点型变量
+name="SAO" #字符串
+
+print(counter)
+print(miles)
+print(name)
+
+a=b=c=1 可以连续赋值 
+a,b,c=1,2,"John" 不同类型变量
 
 #字符串
+[]用来取索引
 str="hello world"
 print(str)
 print(str[0])
@@ -59,13 +62,18 @@ print(mytuple1)
 
 #字典
 dict1={}
-dict1["one"]="This is one"
+dict1["one"]="This is one" #定义dic1键为one的值是This is one
 dict1["two"]="This is two"
-print(dict1)
+print(dict1) #输出完整的字典
 
 dict2={"name":"Amy","age":"22","height":"170"}
 print(dict2)
 
+#运算符
+= 赋值运算符
+== 逻辑运算符 判断是否相等
+
+#条件语句 注：if else要对齐 要有：
 a=10
 b=20
 c=[1,2,3,4,5,6,7,9,10]
@@ -88,9 +96,10 @@ if(name=="boss"):
 else:
     print(name)
 
-for x in range(0,9):
+for x in range(0,9):  #左边的“0”包含，右边的“9”不包含
     print(x)
 
+#循环语句
 count=0
 while(count<9):
     print("The value is",count)
