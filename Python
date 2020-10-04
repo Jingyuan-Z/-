@@ -1,0 +1,111 @@
+#print("hello world!")
+
+
+#import os
+#my_cwd=os.getcwd #获取当前目录
+#print(my_cwd)
+
+
+#help("modules") 显示当前安装包
+
+counter=1110
+miles=1000.0
+name="SAO"
+
+print(counter)
+print(miles)
+print(name)
+
+Python有五个标准的数据类型：
+Numbers(数字) 又分为：int(有符号整型)；long(长整型)；float（浮点型）；complex(复数用a+bj,或者complex(a，b))
+String(字符串)
+List（列表）
+Tuple（元组）
+Dictionary（字典）
+
+#字符串
+str="hello world"
+print(str)
+print(str[0])
+print(str[2:5])
+print(str[2:])
+print(str*2)
+print(str+"TEST")
+
+stra="2"
+print(stra)
+
+#列表
+list=["喜欢",3.5,"不喜欢",-1,666]
+tinylist=[123,"你是谁"]
+print(list)
+print(list[0])
+print(list[2:3])
+print(tinylist*2)
+print(list+tinylist)
+list2=[1,2,3,4]
+my_list=["c","d"]
+a=["c","d"]
+print(list2+my_list+a)
+
+tinylist[1]="小明" #变更列表内元素
+print(tinylist)
+
+#元组
+mytuple1=("2020","广告学",46,"数据挖掘与可视化")
+print(mytuple1)
+
+#字典
+dict1={}
+dict1["one"]="This is one"
+dict1["two"]="This is two"
+print(dict1)
+
+dict2={"name":"Amy","age":"22","height":"170"}
+print(dict2)
+
+a=10
+b=20
+c=[1,2,3,4,5,6,7,9,10]
+if(a in c):
+    print("a is in c")
+else: #注意对齐
+    print("a is not in c")
+
+b=7
+if(b not in c):
+    print("b is not in c")
+else:
+    print("b is in c")
+
+flag=False #用作标记 黑色是变量颜色 橙色是逻辑词 函数是紫色
+name="luren"
+if(name=="boss"):
+    flag=True #更新原有变量
+    print("welcome boss")
+else:
+    print(name)
+
+for x in range(0,9):
+    print(x)
+
+count=0
+while(count<9):
+    print("The value is",count)
+    count=count+1
+print("The end!")
+
+#自定义均值函数
+def mybar(x):
+    num=len(x)
+    mysum=sum(x)
+    ave=mysum/num
+    return(ave) #返回后就能赋值给变量
+age=[22,29,19,30,56,20]
+height=[134,167,198,167,123,189]
+
+print("平均年龄",mybar(age))
+result0=mybar(height)
+print("平均身高",result0)
+
+    
