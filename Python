@@ -119,4 +119,110 @@ print("平均年龄",mybar(age))
 result0=mybar(height)
 print("平均身高",result0)
 
-    
+#九九乘法表
+for i in range(1,10):
+    for j in range(1,i+1):
+	    print("%d*%d=%d"%(i,j,i*j),end='') #%d是整数 %f浮点 %s字符串
+    print("") #空行
+
+import time
+myD={1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}
+for key,value in dict.items(myD):
+    print(key,value)
+    time.sleep(1) #暂停一秒输出
+
+#判断成绩的等级
+score=98
+if(score>=90):
+    print("优秀")
+else:
+    if(score>=80 and score<90):
+        print("良好")
+    else:
+        if(score>=60 and score<80):
+            print("及格")
+        else:
+            print("不及格")
+
+#根据用户输入判断成绩等级
+score=int(input("输入分数:\n"))
+if score>=90:
+    grade="A"
+elif score>=60:
+    grade="B"
+else:
+    grade="C"
+print("%d属于%s"%(score,grade))
+
+#安装包
+在命令提示符里找到文件所在目录 cd 文件路径Scripts
+pip install 包名
+如果需要更新
+python -m pip install --upgrade pip
+
+#nump包使用#
+import numpy as np
+ar1=np.array([1,2,3,4,5])
+A=[3,2,33,12,5,66] #定义一个列表A
+ar2=np.array(A)
+print("ar1:",ar1)
+print("\n")
+print("ar2:",ar2)
+
+ar3=np.arange(9)
+print(ar3)
+
+ar4=np.arange(1,15,2)
+print(ar4)
+
+ar5=np.arange(2,20,2)
+print(ar5)
+
+ar6=np.linspace(1,30,10)
+print(ar6)             
+
+#数组的使用
+B=[2,3,4,12,4,6]
+ar8=np.array(B).reshape((2,3)) #2*3二维数组
+print(ar8)
+
+s1=np.sqrt(ar8)
+s2=np.log(ar8)
+s3=np.abs(ar8)
+print(s1,s2,s3)
+#print("%f%f%d"%(s1,s2,s3))#针对一个元素时才能输出
+
+import pandas as pd
+X=[1,2,3,4,6,7,34]
+S1=pd.Series(X)
+weight=[56,60,45,52,47,49,57]
+S2=pd.Series(weight)
+sex=["girl","boy","boy","girl","boy","girl","boy"]
+S3=pd.Series(sex)
+print("序号:\n",S1)
+print("体重:\n",S2)
+print("性别:\n",S3)
+
+CC1=pd.concat([S2,S3],axis=0) #行连接
+CC2=pd.concat([S2,S3],axis=1) #列连接
+
+print("按行连接;\n",CC1)
+print("按列连接;\n",CC2)
+
+df1=pd.DataFrame()#空数据框
+df2=pd.DataFrame(X)
+print("df1:\n",df1)
+print("df2:\n",df2)
+
+ID=["A","B","C","D","E","F","G"]
+df3=pd.DataFrame(X,columns=["X"],index=ID)
+print("df3:\n",df3)
+
+df4=pd.DataFrame({"S1":X,"S2":weight,"S3":sex})
+print("df4:\n",df4)
+
+df4['S22']=df4['S2']**2
+print(df4)
+
+del df4["S2"]
+print(df4)
